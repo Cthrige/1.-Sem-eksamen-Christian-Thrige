@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Konkurrencer</title>
+      <link rel="stylesheet" href="../css/style.css">
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+
+  <header>
+    <a href="index.html"><img class="logo" src="../img/urtelogo.jpg" alt="logo"></a>
+      <div class="btn">
+         <span class="fas fa-bars"></span>
+      </div>
+      <div class="user">
+        <span class="far fa-user fa-2x"></span>
+      </div>
+      <!-- <input class="searchfield" type="text" placeholder="Search.."> -->
+      <button type="submit"><i class="fa fa-search fa-2x"></i></button>
+
+    <nav class="sidebar">
+         <div class="text">
+            Urtekram
+         </div>
+         <ul class="sidebar-nav">
+            <li class="active"><a href="#"><span class="fas fa-bacon"></span> Fettuccine</a></li>
+            <li>
+               <a href="#" class="feat-btn"> Inspiration +
+               <span class="fas fa-lightbulb"></span>
+               </a>
+               <ul class="feat-show">
+                  <li><a href="gino.html">Ginos Madblog</a></li>
+                  <li><a href="#">Mad trends</a></li>
+               </ul>
+            </li>
+            <li>
+               <a href="#" class="serv-btn"> Bæredygtighed +
+               <span class="fas fa-seedling"></span>
+               </a>
+               <ul class="serv-show">
+                  <li><a href="#">Grøn mad</a></li>
+                  <li><a href="#">Indkøb med ansvar</a></li>
+               </ul>
+            </li>
+            <li><a href="opskrifter.html"><span class="fas fa-book-open"></span> Opskrifter</a></li>
+            <li><a href="konkurrencer.html"><span class="fas fa-trophy"></span> Konkurrencer</a></li>
+            <li><a href="#"><span class="fas fa-envelope"></span> Kontakt Os</a></li>
+            <li><a href="#"><span class="fas fa-info-circle"></span> Om Urtekram</a></li>      
+            <li><a href="#"><span class="fas fa-globe-europe"></span> Sprog</a></li>
+                          
+         </ul>
+
+         <div class="icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+         </div>
+    </nav>
+  </header>
+
+<!-- Navbar slut -->
+
+<!-- Content -->
+
+
+<div class="konkurrence-forside">
+  <img id="konkurrence-img" src=" ../img/danski.png" alt="danski">
+</div>
+
+<div class="konkurrence-wrap">
+  <h1 class="konkurrence-overskrift">Vind en rejse for 5 personer!</h1>
+  <p>I forbindelse med vores nye kampagne med Urtekram Fettuccine har vi hos Urtekram valgt at afholde en konkurrence til alle jer Italien-elskere! I får de bedste fra begge verdener med flotte omgivelser og lækker italiensk mad!
+    Hvis du og 4 andre kunne have brug for at komme væk fra den travle hverdag, prøve noget skiløb af og ikke mindst spise en masse italiensk mad, så er det nu man skal slå til!
+  </p>
+  <p>Rejsen vil indholde: Transport i form af nattog fra diverse destiantioner i Danmark direkte til dit næste selvvalgte eventyr i de italienske bjerge, Ophold på både 3 og 4 stjernede hoteller og alt betalt mht. liftkort og leje. Derudover vil der være booket bord på de omkringliggende italienske restauranter på vores regning.
+      Hvis dette lyder som en oplevelse for dig, så tilmeld dig nu!
+      Sidste tilmeldingsdato 31. Dec 2021.</p>
+</div>
+
+<div id="page-container2">
+  <div id="page-wrap2">
+<h1 class="konkurrence-overskrift2">Tilmeld dig her</h1>
+
+<div class="video-container">
+  <div class="video">
+    <iframe width="375" height="315" src="https://www.youtube.com/embed/NjmPT0xAWyE?loop=1"></iframe>
+  </div>
+  <div class="intro">
+    Vi leder efter den helt rette til dette oplevelsesrige eventyr. Din tilmelding skal derfor indeholde en hjemmeskudt video af dig der laver en ret med Urtekram Fettuccine.
+    <br>
+    Videoen skal indeholde dine oplysninger så vi har chancen for at få dig kontakte, hvis du nu gik hen og vandt turen.
+    <br>
+    <br>
+    Vi har vedhæftet et eksempel på hvordan det kunne se ud
+<form action="/action_page.php">
+  <input type="file" id="myFile" name="filename">
+  <input type="submit">
+</form>
+  </div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer>
+  <section class="footer">
+    <div class="social">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <ul class="list">
+      <li>
+          <a href="#">Hjem</a>
+      </li>
+      <li>
+        <a href="#">Service</a>
+      </li>
+      <li>
+        <a href="#">Terms</a>
+      </li>
+      <li>
+        <a href="#">Privacy policy</a>
+      </li>
+      </ul>
+    
+    <p class="copyright">
+      Christian Thrige @2021 Eksamen
+    </p>
+
+  </section>
+</footer>
+
+
+
+      <script>
+         $('.btn').click(function(){
+           $(this).toggleClass("click");
+           $('.sidebar').toggleClass("show");
+         });
+           $('.feat-btn').click(function(){
+             $('nav ul .feat-show').toggleClass("show");
+             $('nav ul .first').toggleClass("rotate");
+           });
+           $('.serv-btn').click(function(){
+             $('nav ul .serv-show').toggleClass("show1");
+             $('nav ul .second').toggleClass("rotate");
+           });
+           $('nav ul li').click(function(){
+             $(this).addClass("active").siblings().removeClass("active");
+           });
+      </script>
+   </body>
+</html>

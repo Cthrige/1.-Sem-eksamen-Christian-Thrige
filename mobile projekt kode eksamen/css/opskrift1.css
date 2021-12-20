@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+@font-face{
+  src: url(../font/Lato-Bold.ttf);
+  font-family: lato;
+}
+
+header{
+  position: fixed;
+  background: black;
+  width:100%;
+  height:62px;
+  z-index:1;
+}
+
+img.logo{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  height:100px;
+  width:100px;
+}
+
+/* Navbar */
+.btn{
+  position: absolute;
+  top: 12%;
+  left: 4%;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  background: #353535;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: left 0.4s ease;
+  z-index: 999;
+}
+.btn.click{
+  left: 22%;
+}
+.btn span{
+  color: white;
+  font-size: 28px;
+  line-height: 45px;
+}
+.btn.click span:before{
+  content: '\f00d';
+}
+
+.user {
+  position: absolute;
+  top: 22%;
+  right: 4%;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/*styling af søgefelt */
+input[type=text] {
+  position: absolute;
+  top: 9%;
+  right: 9.2%;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+button{
+  position: absolute;
+  top: 22%;
+  right: 8%;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  color:white;
+  background-color: black;
+}
+
+.sidebar{
+  position: fixed;
+  width: 20%;
+  height: 90%;
+  left: -20%;
+  background: #353535;
+  transition: left 0.4s ease;
+  top:0%;
+  z-index: 999;
+}
+.sidebar.show{
+  left: 0%;
+}
+.sidebar .text{
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 65px;
+  text-align: center;
+  background: #1e1e1e;
+  letter-spacing: 1px;
+}
+nav ul{
+  background: #353535;
+  height: 100%;
+  width: 100%;
+  list-style: none;
+}
+nav ul li{
+  line-height: 60px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+nav ul li:last-child{
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+nav ul li a{
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding-left: 14%;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  border-left: 3px solid transparent;
+}
+nav ul li.active a{
+  color: lightgreen;
+  background: #1e1e1e;
+  border-left-color: lightgreen;
+}
+nav ul li a:hover{
+  background: #1e1e1e;
+}
+nav ul ul{
+  position: static;
+  display: none;
+}
+nav ul .feat-show.show{
+  display: block;
+}
+nav ul .serv-show.show1{
+  display: block;
+}
+nav ul ul li{
+  line-height: 42px;
+  border-top: none;
+}
+nav ul ul li a{
+  font-size: 17px;
+  color: #e6e6e6;
+  padding-left: 21%;
+}
+nav ul li.active ul li a{
+  color: #e6e6e6;
+  background: #4a4a4a;
+  border-left-color: transparent;
+}
+nav ul ul li a:hover{
+  color: lightgreen!important;
+  background: #4a4a4a!important;
+}
+nav ul li a span{
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: transform 0.4s;
+}
+nav ul li a span.rotate{
+  transform: translateY(-50%) rotate(-180deg);
+}
+
+/* Icons */
+
+nav .icons{
+    width: 100%;
+    max-height: 7%;
+    text-align: center;
+    position: absolute;
+    bottom: -6%;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  nav .icons a{
+    height: 100%;
+    width: 14%;
+    display: block;
+    margin: 0 4%;
+    font-size: 18px;
+    color: #f2f2f2;
+    background: #4a4a4a;
+    border-radius: 5px;
+    border: 1px solid #383838;
+    transition: all 0.3s ease;
+    z-index: 9999;
+  }
+  nav .icons a:hover{
+    background: #404040;
+    z-index: 9999;
+  }
+  nav .icons a:first-child{
+    margin-left: 0px;
+    z-index: 9999;
+  }
+
+  /* Responsiveness af navbar*/
+
+  @media screen and (max-width: 1250px)  {
+    .sidebar{
+        position: fixed;
+        width: 30%;
+        height: 90%;
+        left: -30%;
+        background: #353535;
+        transition: left 0.4s ease;
+    }
+    .btn{
+        position: absolute;
+        top: 1%;
+        left: 4%;
+        height: 45px;
+        width: 45px;
+        text-align: center;
+        background: #353535;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: left 0.4s ease;
+      }
+      .btn.click{
+        left: 32%;
+      }
+      button{
+        top: 22%;
+        right: 10%;
+        }
+  }
+
+    @media screen and (max-width: 800px)  {
+        .sidebar{
+            position: fixed;
+            width: 40%;
+            height: 90%;
+            left: -40%;
+            background: #353535;
+            transition: left 0.4s ease;
+        }
+        .btn{
+            position: absolute;
+            top: 1%;
+            left: 4%;
+            height: 45px;
+            width: 45px;
+            text-align: center;
+            background: #353535;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: left 0.4s ease;
+          }
+          .btn.click{
+            left: 42%;
+          }
+
+
+          button{
+            top: 22%;
+            right: 13%;
+            }
+            img.logo{
+              display:block;
+              margin-left: auto;
+              margin-right: auto;
+              height:70px;
+              width:70px;
+            }
+    }
+
+    @media screen and (max-width: 600px){
+    .sidebar{
+        position: fixed;
+        width: 80%;
+        height: 90%;
+        left: -80%;
+        background: #353535;
+        transition: left 0.4s ease;
+        }
+    .btn{
+        position: absolute;
+        top: 12%;
+        left: 4%;
+        height: 45px;
+        width: 45px;
+        text-align: center;
+        background: #353535;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: left 0.4s ease;
+          }
+      .btn.click{
+        left: unset;
+        right:15px;
+        z-index:999;
+          }
+        
+
+      button{
+      top: 22%;
+      right: 15%;
+      }
+
+      img.logo{
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        height:70px;
+        width:70px;
+      }
+    }
+
+/* navbar slut */
+
+
+
+
+
+/* Content */
+
+.hero {
+  height: 25vh;
+  position: relative;
+  background: url(../img/opskrifth1.jpg) center/cover no-repeat;
+  border-radius: var(--borderRadius);
+}
+
+.hero-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: var(--borderRadius);
+  padding-top: 6%;
+}
+.hero-text {
+  color: white;
+  text-align: center;
+  padding-left:5%;
+  padding-right:5%;
+}
+
+.ingredienser{
+  padding-left:10%;
+  padding-right:5%;
+}
+
+.fremgangsmåde{
+  padding-left:10%;
+  padding-right:5%;
+}
+
+.opskrift-h3{
+  padding-left:18px;
+  font-family: lato;
+}
+
+h1{
+  color:white;
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  padding-top:30%;
+  font-size: 30px;
+}
+
+h3{
+  color:rgb(194, 21, 21);
+  font-size:25px;
+  padding-bottom: 8px;
+}
+
+#opskrift-img{
+  border-width: 2px;
+  border-style:solid;
+  border-color:black;
+  max-width: 100%;
+}
+
+section{
+  text-align: center;
+  padding-bottom: 20px;
+  background-color: rgb(252, 238, 209);
+}
+
+.ingrediens-container{
+  padding-bottom:15px;
+  font-weight:500;
+  font-size: 18px;
+  background-color: rgb(252, 238, 209);
+}
+
+.fremgang-container{
+  padding-bottom:25px;
+  font-weight:500;
+  font-size: 18px;
+  background-color: rgb(252, 238, 209);
+}
+
+.ingrediens-container ul li{
+  line-height: 1.7;
+}
+
+.fremgang-container ol li{
+  line-height: 1.7;
+}
+
+
+/* tablet */
+
+@media screen and (min-width: 480px){
+  h1{
+    font-size:2em;
+  }
+  #opskrift-img{
+    max-width: 90%;
+  }
+}
+
+@media screen and (min-width: 768px){
+  h1{
+    font-size: 3em;
+    padding-top:6%;
+  }
+  #opskrift-img{
+    max-width:50%;
+    float:right;
+  }
+  .fremgang-container ol li{
+    line-height: 1.7;
+    font-size: 18px;
+  }
+  .ingrediens-container ul li{
+    line-height: 1.7;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 768px){
+    h1{
+      font-size: 3em;
+      padding-top: 6%;
+      padding-bottom:3%;
+    }
+}
+
+/* Footer */
+
+
+.footer{
+  background-color: #d4b996ff;
+  border-top:black 3px solid;
+}
+
+.footer .social{
+  text-align: center;
+  padding-bottom:25px;
+  color: white;
+  padding-top:20px;
+}
+
+.footer .social a {
+  font-size: 24px;
+  color: black;
+  border: 3px solid black;
+  width:40px;
+  height: 40px;
+  line-height:38px;
+  display: inline-block;
+  text-align:center;
+  border-radius:50%;
+  margin: 0 8px;
+  opacity:0.7;
+}
+
+.footer .social a:hover {
+  opacity: 1;
+  color: rgb(194, 21, 21);
+}
+
+.footer ul {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom:0;
+  text-align:center;
+}
+
+.footer ul a {
+  color: black; /*Noget galt her, bliver ikke hvidt */
+  text-decoration: none;
+  opacity:0.8;
+  font-weight: 500;
+}
+
+.footer ul li {
+  display: inline-block;
+  padding: 0 15px;
+}
+
+.footer ul a:hover {
+  opacity:1;
+  color: rgb(194, 21, 21);
+}
+
+.footer .copyright {
+  margin-top: 15px;
+  text-align:center;
+  font-size: 15px;
+  color:white;
+}
+  
+  /* For at få footeren i bunden */
+  
+  #page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  #content-wrap {
+    padding-bottom: 2.5rem;    /* Footer height */
+  }
